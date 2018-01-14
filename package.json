@@ -1,0 +1,10 @@
+{
+  "name": "API - JWT Authentication",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexandreYembo/webapi-nodejs-jwt"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^8.1.0"
+  }
+}
