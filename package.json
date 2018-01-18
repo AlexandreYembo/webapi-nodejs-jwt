@@ -1,10 +1,21 @@
 {
-  "name": "API - JWT Authentication",
+  "name": "jwt-authentication",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AlexandreYembo/webapi-nodejs-jwt"
   },
   "dependencies": {
-    "jsonwebtoken": "^8.1.0"
+    "bcrypt": "^1.0.3",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "error-factory": "^0.1.6",
+    "express": "^4.16.2",
+    "joi": "^13.0.2",
+    "jsonwebtoken": "^8.1.0",
+    "moment": "^2.19.4",
+    "mongoose": "^4.13.7",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.2"
   }
 }

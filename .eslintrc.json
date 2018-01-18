@@ -1,0 +1,35 @@
+{
+	"env": {
+		"es6": true,
+		"node": true,
+		"mocha": true
+	},
+	"extends": "standard",
+	"rules": {
+		"no-console": 0,
+		"indent": [
+			"error",
+			2,
+			{
+				"SwitchCase": 1
+			}
+		],
+		"quotes": [
+			"error",
+			"single"
+		],
+		"semi": [
+			"error",
+			"never"
+		],
+		"no-unused-vars": [
+			"warn"
+		],
+		"one-var": [
+			"off"
+		],
+		"space-before-function-paren": [
+			"off"
+		]
+	}
+}

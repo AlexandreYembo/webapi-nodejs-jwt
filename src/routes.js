@@ -1,6 +1,9 @@
-const {userController} = require('./api/controllers')
+const express = require('express'),
+ userController = require('./api/controllers'),
+ router = express.Router()
 
-module.exports = function(app) {
-   app.route('auth/register').post(userController.register)
-   app.route('auth/signIn').post(userController.auth)
-}
+ router.route('register').post(userController.register)
+ 
+module.exports = router
+  
+ // router.route('signIn').post(userController.auth)

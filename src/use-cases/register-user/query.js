@@ -7,9 +7,5 @@ const createHashPassword = (user) => {
     return user
 }
 
-const register = ({collection}) => (user) => 
- new userSchema(collection).save(createHashPassword(user))
-
-module.exports = {
-    register: register
-}
+module.exports = (user) => 
+    new userSchema('user').save(createHashPassword(user))
