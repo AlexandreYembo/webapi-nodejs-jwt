@@ -5,7 +5,6 @@ bcrypt = require('bcrypt')
 const  {register} = require('../request-handlers')
 
 module.exports = {
-  register: (req, res) =>{
-    return register(req, res)
-  }
+  register: (req, res) => register(req, res),
+  signIn: (req, res) => signIn(req, res)
 }

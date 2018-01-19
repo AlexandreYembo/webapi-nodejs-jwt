@@ -1,16 +1,14 @@
-const registerUser = require('../../use-cases/register-user/query')
+const registerUser = require('../../use-cases/register-user/query'),
+  {duplicateKey} = require('../../errors')
 
-const success = (res) => (user) =>{
-  user.hash_password = null
-  res.json(user)
-}
+const success = (res) => res.json(true)
+const duplicateKeyError = (res) => (error) => res.status(400).send({message: error})
+const error = (res) => (error) => res.status(500).send({message: error})
 
-const error = (res) => (result) =>
-  res.status(400).send({message: result})
-
-module.exports = (req, res) =>{
+module.exports = (req, res) =>
     registerUser(req.body)
-    .then(success)
-    .catch(error)
-}
+    .then(success(res))
+    .catch(duplicateKey, err => duplicateKeyError(res)(err))
+    .catch(err => error(res)(err))
+
   

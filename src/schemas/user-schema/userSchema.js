@@ -31,4 +31,6 @@ const mongoose = require('mongoose'),
      return bcrypt.compareSync(password, this.hash_password)
  }
 
+ //userSchema.statics = require('./user-statics')
+
  module.exports = userSchema

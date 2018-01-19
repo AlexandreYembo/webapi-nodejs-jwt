@@ -1,5 +1,5 @@
-const {userSchema} = require('../../schemas'),
- jwt = require('jsonwebtoken'),
+const UserSchema = require('../../schemas/user-schema'),
+ {duplicateKey} = require('../../errors'),
  bcrypt = require('bcrypt')
 
 const createHashPassword = (user) => {
@@ -8,4 +8,6 @@ const createHashPassword = (user) => {
 }
 
 module.exports = (user) => 
-    new userSchema('user').save(createHashPassword(user))
+    new UserSchema(createHashPassword(user)).save()
+    .then(result => result)
+    .catch(err => err.message.includes('duplicate key error collection') && Promise.reject(duplicateKey(`Error to register user: ${user.email}. There is an user registred`)) || Promise.reject(err))
