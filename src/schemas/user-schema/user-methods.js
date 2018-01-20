@@ -4,6 +4,6 @@ const {userNotFound} = require('../../errors'),
 module.exports = {
   comparePassword: function(password){
     const result = bcrypt.compareSync(password, this.hash_password)
-    return this || Promise.reject(userNotFound('Authentication failed. Invalid user or password'))
+    return result && Promise.resolve(this) || Promise.reject(userNotFound('Authentication failed. Invalid user or password'))
   }
 }
