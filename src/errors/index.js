@@ -2,5 +2,6 @@ const factory = require('error-factory')
 
 module.exports = {
   duplicateKey: factory('duplicateKey'),
-  userNotFound: factory('userNotFound')
+  userNotFound: factory('userNotFound'),
+  invalidHeader: factory('invalidHeader')
 }

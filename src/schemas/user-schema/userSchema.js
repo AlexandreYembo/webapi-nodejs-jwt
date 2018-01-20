@@ -26,12 +26,7 @@ const mongoose = require('mongoose'),
      }
  })
 
-//  userSchema.methods.comparePassword = function(password){
-//      const result = bcrypt.compareSync(password, this.hash_password)
-//      return result || Promise.reject(userNotFound('Authentication failed. Invalid user or password'))
-//  }
-
 userSchema.methods = require('./user-methods')
- userSchema.statics = require('./user-statics')
+userSchema.statics = require('./user-statics')
 
- module.exports = userSchema
+module.exports = userSchema

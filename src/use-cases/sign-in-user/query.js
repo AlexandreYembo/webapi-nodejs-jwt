@@ -1,10 +1,12 @@
 const userSchema = require('../../schemas/user-schema'),
   jwt = require('jsonwebtoken'),
-  {userNotFound} = require('../../errors')
+  {userNotFound} = require('../../errors'),
+  config = require('./config')
+
 
 const createTokenResult = (user) =>{
   return  {
-    token: jwt.sign({email: user.email, fullName: user.fullName, _id: user._id}, 'RESTFULAPIs')
+    token: jwt.sign({email: user.email, fullName: user.fullName, _id: user._id}, config.KEY_JWT)
    }
 }
   module.exports = (user) => 
