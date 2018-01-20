@@ -2,7 +2,7 @@
 const jwt = require('jsonwebtoken'),
 bcrypt = require('bcrypt')
 
-const  {register} = require('../request-handlers')
+const  {register, signIn} = require('../request-handlers')
 
 module.exports = {
   register: (req, res) => register(req, res),

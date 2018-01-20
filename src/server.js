@@ -19,6 +19,7 @@ bootstrap.init().then(() =>{
 
  // app.use('/api/', routes)
  app.post('/register', controllers.register)
+ app.post('/signIn', controllers.signIn)
 
   let port = process.env.port || 3000
 

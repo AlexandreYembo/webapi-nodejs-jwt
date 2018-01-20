@@ -1,4 +1,4 @@
-const UserSchema = require('../../schemas/user-schema'),
+const userSchema = require('../../schemas/user-schema'),
  {duplicateKey} = require('../../errors'),
  bcrypt = require('bcrypt')
 
@@ -8,6 +8,6 @@ const createHashPassword = (user) => {
 }
 
 module.exports = (user) => 
-    new UserSchema(createHashPassword(user)).save()
+    new userSchema(createHashPassword(user)).save()
     .then(result => result)
     .catch(err => err.message.includes('duplicate key error collection') && Promise.reject(duplicateKey(`Error to register user: ${user.email}. There is an user registred`)) || Promise.reject(err))

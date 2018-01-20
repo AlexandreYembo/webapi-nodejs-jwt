@@ -1,7 +1,6 @@
 'use strict'
 
 const mongoose = require('mongoose'),
- bcrypt = require('bcrypt'),
  Schema = mongoose.Schema
 
  const userSchema = new Schema({
@@ -27,10 +26,12 @@ const mongoose = require('mongoose'),
      }
  })
 
- userSchema.methods.comparePassword = function(password){
-     return bcrypt.compareSync(password, this.hash_password)
- }
+//  userSchema.methods.comparePassword = function(password){
+//      const result = bcrypt.compareSync(password, this.hash_password)
+//      return result || Promise.reject(userNotFound('Authentication failed. Invalid user or password'))
+//  }
 
- //userSchema.statics = require('./user-statics')
+userSchema.methods = require('./user-methods')
+ userSchema.statics = require('./user-statics')
 
  module.exports = userSchema
