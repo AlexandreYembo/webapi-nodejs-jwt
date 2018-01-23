@@ -1,7 +1,7 @@
 const userSchema = require('../../schemas/user-schema'),
   jwt = require('jsonwebtoken'),
   {userNotFound} = require('../../errors'),
-  config = require('./config')
+  config = require('../../config')
 
 
 const createTokenResult = (user) =>{
