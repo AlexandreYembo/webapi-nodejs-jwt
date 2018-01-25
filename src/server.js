@@ -1,11 +1,8 @@
 global.Promise = require('bluebird')
 
-const controllers = require('./api/controllers'),
- //routes = require('./routes'),
+const routes = require('./routes'),
  bootstrap = require('./bootstrap'),
- config = require('./config'),
- authorizeHandler = require('./api/request-handlers/authorize-handlers'),
- authorize = require('./authorize')
+ config = require('./config')
 
 const express = require('express'),
 bodyParser = require('body-parser'),
@@ -15,23 +12,24 @@ jwt = require('jsonwebtoken')
 bootstrap.init().then(() =>{
   const app = express()
   app.use(bodyParser.json())
-  
-  app.use(function(req, res, next) {
-    authorize()
-  })
 
-  // app.use(function(req, res, next) {
-  //   if (req.headers && req.headers.authorization && req.headers.authorization.split(' ')[0] === 'JWT') {
-  //     jwt.verify(req.headers.authorization.split(' ')[1], config.KEY_JWT, function(err, decode) {
-  //       if (err) req.user = undefined;
-  //       req.user = decode;
-  //       next();
-  //     });
-  //   } else {
-  //     req.user = undefined;
-  //     next();
-  //   }
-  // });
+  //implement Jason Web Token validation
+  app.use(function(req, res, next) {
+    if (req.headers && req.headers.authorization && req.headers.authorization.split(' ')[0] === 'JWT') {
+      jwt.verify(req.headers.authorization.split(' ')[1], config.KEY_JWT, function(err, decode) {
+        if (err) 
+        {
+          req.user = undefined;
+          return res.status(401).json({ message: err })
+        }
+        req.user = decode;
+        next();
+      });
+    } else {
+      req.user = undefined;
+      next();
+    }
+  });
 
   app.use(cors())
   
@@ -39,11 +37,7 @@ bootstrap.init().then(() =>{
     extended: true
   }))
 
- // app.use('/api/', routes)
- app.post('/register', controllers.register)
- app.post('/signIn', controllers.signIn)
- app.route('/list')
-  .get(authorizeHandler.authorize, controllers.list)
+  routes(app)
 
   let port = process.env.port || 3000
 

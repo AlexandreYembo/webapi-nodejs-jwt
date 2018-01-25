@@ -1,9 +1,12 @@
 const express = require('express'),
  userController = require('./api/controllers'),
- router = express.Router()
+ controllers = require('./api/controllers'),
+ authorizeHandler = require('./api/request-handlers/authorize-handlers')
 
- router.route('register').post(userController.register)
- 
-module.exports = router
-  
- // router.route('signIn').post(userController.auth)
+
+module.exports = (app) => {
+  app.post('/register', controllers.register)
+  app.post('/signIn', controllers.signIn)
+  app.route('/list')
+ .get(authorizeHandler.authorize, controllers.list)
+}
