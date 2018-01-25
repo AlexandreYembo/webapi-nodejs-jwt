@@ -16,7 +16,9 @@ bootstrap.init().then(() =>{
   const app = express()
   app.use(bodyParser.json())
   
- //authorize()
+  app.use(function(req, res, next) {
+    authorize()
+  })
 
   // app.use(function(req, res, next) {
   //   if (req.headers && req.headers.authorization && req.headers.authorization.split(' ')[0] === 'JWT') {
