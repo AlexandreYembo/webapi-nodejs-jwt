@@ -1,7 +1,6 @@
-module.exports = (req, res, next) => {
-  if (req.user) {
-    return res.json(req.user)
-  } else {
-    return res.status(401).json({ message: 'Unauthorized user!' });
-  }
+const authorize = (req, res, next) => 
+  req.user && next() || res.status(401).json({ message: 'Unauthorized user!' })
+
+module.exports = {
+  authorize: (req, res, next) =>authorize(req, res, next)
 }

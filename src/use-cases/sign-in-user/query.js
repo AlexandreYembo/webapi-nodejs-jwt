@@ -6,7 +6,8 @@ const userSchema = require('../../schemas/user-schema'),
 
 const createTokenResult = (user) =>{
   return  {
-    token: jwt.sign({email: user.email, fullName: user.fullName, _id: user._id}, config.KEY_JWT)
+    token: jwt.sign({email: user.email, fullName: user.fullName, _id: user._id},
+      config.KEY_JWT, {expiresIn: 60 })
    }
 }
   module.exports = (user) => 

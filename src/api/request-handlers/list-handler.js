@@ -1,12 +1,6 @@
-const list = (req) =>{
-  if(req.user){
-    next()
-  }
-  else{
-    
-  }
-}
+const list = ({user}, res) =>
+  res.json(user)
 
 module.exports = (req, res) => {
-  list: list(req)
+  list: list(req, res)
 }
