@@ -16,18 +16,18 @@ bootstrap.init().then(() =>{
   //implement Jason Web Token validation
   app.use(function(req, res, next) {
     if (req.headers && req.headers.authorization && req.headers.authorization.split(' ')[0] === 'JWT') {
-      jwt.verify(req.headers.authorization.split(' ')[1], config.KEY_JWT, function(err, decode) {
+      jwt.verify(req.headers.authorization.split(' ')[1], config.KEY_JWT, (err, decode) => {
         if (err) 
         {
-          req.user = undefined;
+          req.user = undefined
           return res.status(401).json({ message: err })
         }
-        req.user = decode;
-        next();
-      });
+        req.user = decode
+        next()
+      })
     } else {
-      req.user = undefined;
-      next();
+      req.user = undefined
+      next()
     }
   });
 
