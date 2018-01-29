@@ -1,8 +1,8 @@
 global.Promise = require('bluebird')
 
-const routes = require('./routes'),
- bootstrap = require('./bootstrap'),
- config = require('./config')
+const routes = require('./src/routes'),
+ bootstrap = require('./src/bootstrap'),
+ config = require('./src/config')
 
 const express = require('express'),
 bodyParser = require('body-parser'),
