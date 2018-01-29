@@ -1,5 +1,9 @@
 {
   "name": "jwt-authentication",
+  "description": "A sample Node.js app using Express 4",
+  "engines": {
+    "node": "8.9.1"
+  },
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -21,5 +25,11 @@
     "mongoose": "^4.13.7",
     "request": "^2.81.0",
     "request-promise": "^4.2.2"
-  }
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
 }
