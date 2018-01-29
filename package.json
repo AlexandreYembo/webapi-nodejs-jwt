@@ -1,8 +1,12 @@
 {
   "name": "jwt-authentication",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AlexandreYembo/webapi-nodejs-jwt"
+  },
+  "scripts": {
+    "start": "node index.js"
   },
   "dependencies": {
     "bcrypt": "^1.0.3",
