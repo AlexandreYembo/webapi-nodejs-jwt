@@ -13,7 +13,7 @@ bootstrap.init().then(() =>{
   const app = express()
   app.use(bodyParser.json())
 
-  //implement Jason Web Token validation
+  //implement Jason Web Token validation//
   app.use(function(req, res, next) {
     if (req.headers && req.headers.authorization && req.headers.authorization.split(' ')[0] === 'JWT') {
       jwt.verify(req.headers.authorization.split(' ')[1], config.KEY_JWT, (err, decode) => {
