@@ -15,7 +15,7 @@
 
 ### How to run this projects:
 First of all you need to clone this project in your location folder. You can put this command, as the image below:
-![Alt text](https://github.com/fabioono25/webapicore2jwt/blob/master/Images/mongodb.png "MongoDB Configuration")
+
 
 
 
