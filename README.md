@@ -1,4 +1,4 @@
-# Example of REST API Using MongoDB, Node.js and JWT Authentication
+# Example of REST API using MongoDB, Node.js and JWT Authentication
 
 ### Technologies:
 - node.js;
