@@ -39,7 +39,7 @@ After that, the project will be able to run, therefore just start the applicatio
 
 `npm start`
 
-![Alt text] (https://github.com/AlexandreYembo/webapi-nodejs-jwt/blob/master/images/project-running.png "Project running")
+![Alt text](https://github.com/AlexandreYembo/webapi-nodejs-jwt/blob/master/images/project-running.png "Project running")
 
 The image above points that the application is running. You can try to test using some third application. I recommend to use Postman, but you be free to choose anyone.
 
