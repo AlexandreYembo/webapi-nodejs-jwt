@@ -25,8 +25,8 @@ After that you need either install/create your local mongo instance or you can s
 `src/config.js`
 
 `module.exports = {
-  MONGO_CONNECTION_STRING: process.env.MONGO_CONNECTION_STRING ||  [#####PUT_YOUR_CONNECTION_STRING_HERE],
-  KEY_JWT: process.env.KEY_JWT || '4b40460a-3488-40d3-9f1e-7f1a2de5518a', // #####You can put choose a secret key to encrypt/decrypt the token generated
+  MONGO_CONNECTION_STRING: process.env.MONGO_CONNECTION_STRING ||  [PUT_YOUR_CONNECTION_STRING_HERE],
+  KEY_JWT: process.env.KEY_JWT || '4b40460a-3488-40d3-9f1e-7f1a2de5518a', // You can put choose a secret key to encrypt/decrypt the token generated
   TOKEN_EXPIRES_TIME: 60
 } `
 
