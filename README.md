@@ -41,7 +41,8 @@ After that, the project will be able to run, therefore just start the applicatio
 
 ![Alt text](https://github.com/AlexandreYembo/webapi-nodejs-jwt/blob/master/images/project-running.png "Project running")
 
-The image above points that the application is running. You can test using some third application. I recommend to use Postman, but you are free to choose anyone.
+
+The image above points that the application is running. You can test using some third application. I recommend to use Postman, but you are free to choose anyone. If you choose for Postman you can use this collection, just import this one using this link: https://www.getpostman.com/collections/2ae2cd24436d44c2d3be
 
 The images bellow point the application running on Postman:
 
