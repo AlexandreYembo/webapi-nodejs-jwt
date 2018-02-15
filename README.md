@@ -20,7 +20,16 @@ First of all you need to clone this project in your location folder. You can put
 
 
 
-After that you need either install/create your local mongo instance or you can set any cloud service to test.
+After that you need either install/create your local mongo instance or you can set any cloud service to test. You need to change the config.js file, puting your connection string of mongodb, such as:
+
+`src/config.js`
+
+`module.exports = {
+  MONGO_CONNECTION_STRING: process.env.MONGO_CONNECTION_STRING ||  [#####PUT_YOUR_CONNECTION_STRING_HERE],
+  KEY_JWT: process.env.KEY_JWT || '4b40460a-3488-40d3-9f1e-7f1a2de5518a', // #####You can put choose a secret key to encrypt/decrypt the token generated
+  TOKEN_EXPIRES_TIME: 60
+} `
+
 
 Before run this project you need to install the node modules. You may execute this command in your console or window prompt:
 
