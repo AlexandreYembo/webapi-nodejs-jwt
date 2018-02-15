@@ -64,7 +64,7 @@ If you prefer, you can run using curl command such as:
 
 #### Executing List command
 `curl --request GET \
-  --url 'http://{{API_URL}}/list' \
+  --url 'http://localhost:3000/list' \
   --header 'Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlQGdtYWlsLmNvbSIsImZ1bGxOYW1lIjoiQWxleGFuZHJlIFllbWJvIiwiX2lkIjoiNWE2MjdhZjJkNzVmNzA0MGNjY2RiODhmIiwiaWF0IjoxNTE2OTkwMDczLCJleHAiOjE1MTY5OTAxMzN9.eW-4p2DOo-IB7ZR_gEIznp_0U1Vz06tBXwfrN4d4WbQ'`
 
 
