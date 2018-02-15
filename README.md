@@ -20,8 +20,6 @@ First of all you need to clone this project in your location folder. You can put
 
 
 
-
-
 After that you need either install/create your local mongo instance or you can set any cloud service to test.
 
 Before run this project you need to install the node modules. You may execute this command in your console or window prompt:
@@ -42,7 +40,24 @@ After that, the project will be able to run, therefore just start the applicatio
 ![Alt text](https://github.com/AlexandreYembo/webapi-nodejs-jwt/blob/master/images/project-running.png "Project running")
 
 
-The image above points that the application is running. You can test using some third application. I recommend to use Postman, but you are free to choose anyone. If you choose for Postman you can use this collection, just import this one using this link: https://www.getpostman.com/collections/2ae2cd24436d44c2d3be
+The image above points that the application is running. You can test using some third application. 
+I recommend to use Postman, but you are free to choose anyone. If you choose for Postman you can use this collection, just import this one using this link: https://www.getpostman.com/collections/2ae2cd24436d44c2d3be
+
+If you prefer, you can run using curl command such as:
+
+#### Executing login command
+`curl --request POST   --url 'http://localhost:3000/signIn'   --data 'email=teste%40gmail.com&password=123'`
+
+#### Executing Register command
+`curl --request POST \
+  --url 'http://localhost:3000/register' \
+  --data 'email=teste%40gmail.co&password=123&fullName=Alexandre%20Yembo'`
+
+#### Executing List command
+`curl --request GET \
+  --url 'http://{{API_URL}}/list' \
+  --header 'Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlQGdtYWlsLmNvbSIsImZ1bGxOYW1lIjoiQWxleGFuZHJlIFllbWJvIiwiX2lkIjoiNWE2MjdhZjJkNzVmNzA0MGNjY2RiODhmIiwiaWF0IjoxNTE2OTkwMDczLCJleHAiOjE1MTY5OTAxMzN9.eW-4p2DOo-IB7ZR_gEIznp_0U1Vz06tBXwfrN4d4WbQ'`
+
 
 The images bellow point the application running on Postman:
 
@@ -61,6 +76,7 @@ The images bellow point the application running on Postman:
 
 #### User registred:
 ![Alt text](https://github.com/AlexandreYembo/webapi-nodejs-jwt/blob/master/images/User%20registred.png "User registred")
+
 
 
 
