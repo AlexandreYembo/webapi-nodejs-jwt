@@ -41,6 +41,25 @@ After that, the project will be able to run, therefore just start the applicatio
 
 ![Alt text](https://github.com/AlexandreYembo/webapi-nodejs-jwt/blob/master/images/project-running.png "Project running")
 
-The image above points that the application is running. You can test using some third application. I recommend to use Postman, but you be free to choose anyone.
+The image above points that the application is running. You can test using some third application. I recommend to use Postman, but you are free to choose anyone.
+
+The images bellow point the application running on Postman:
+
+#### login sucessfully:
+![Alt text](https://github.com/AlexandreYembo/webapi-nodejs-jwt/blob/master/images/PostmanSignIn-Sucess.png "Login sucessfully")
+
+#### login failed:
+![Alt text](https://github.com/AlexandreYembo/webapi-nodejs-jwt/blob/master/images/User%20invalid.png "Login failed")
+
+#### Token Valid:
+![Alt text](https://github.com/AlexandreYembo/webapi-nodejs-jwt/blob/master/images/Valid%20Token.png "Token valid")
+
+#### Token expired:
+![Alt text](https://github.com/AlexandreYembo/webapi-nodejs-jwt/blob/master/images/expired-token.png "Token expired")
+
+
+#### User registred:
+![Alt text](https://github.com/AlexandreYembo/webapi-nodejs-jwt/blob/master/images/User%20registred.png "User registred")
+
 
 
