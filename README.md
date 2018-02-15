@@ -14,7 +14,7 @@
 - error-factory;
 
 ### How to run this projects:
-First of all you need to clone this project in your location folder. You can put this command, as the image below:
+First of all you need to clone this project in your location folder. You can put this command:
 
 `git clone https://github.com/AlexandreYembo/webapi-nodejs-jwt.git`
 
