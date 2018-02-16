@@ -5,7 +5,7 @@
 - mongodb;
 
 #### node_modules:
-- jasonwebtoken;
+- jsonwebtoken;
 - bcrypt;
 - bluebird;
 - express;
@@ -13,7 +13,7 @@
 - cors;
 - error-factory;
 
-### How to run this projects:
+### How to run this project:
 First of all you need to clone this project in your location folder. You can put this command:
 
 `git clone https://github.com/AlexandreYembo/webapi-nodejs-jwt.git`
